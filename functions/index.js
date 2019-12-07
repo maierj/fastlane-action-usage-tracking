@@ -20,7 +20,7 @@ exports.registerActionRun = functions.https.onRequest((req, res) => {
     };
 
     mailOptions.subject = "New fastlane action run";
-    mailOptions.text = `<ul><li>Runner OS: ${req.body.runnerOS}</li><li>Repository: ${req.body.repository}</li><li>UsesOptions: ${req.body.usesOptions}</li><li>UsesSubdirectory: ${req.body.usesSubdirectory}</li><li>UsesBundleInstallPath: ${req.body.usesBundleInstallPath}</li></ul>`;
+    mailOptions.html = `<ul><li>Runner OS: ${req.body.runnerOS}</li><li>Repository: ${req.body.repository}</li><li>UsesOptions: ${req.body.usesOptions}</li><li>UsesSubdirectory: ${req.body.usesSubdirectory}</li><li>UsesBundleInstallPath: ${req.body.usesBundleInstallPath}</li></ul>`;
 
     try {
         mailTransport.sendMail(mailOptions);
