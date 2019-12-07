@@ -13,7 +13,7 @@ const mailTransport = nodemailer.createTransport({
     },
 });
 
-exports.jfDjzewAZBKCNmdxUqkcvrCcRphfiVgshhcGQBzhtayQWraQhyhzbjFmxtbhCEWZ = functions.https.onRequest((req, res) => {
+exports.registerActionRun = functions.https.onRequest((req, res) => {
     const mailOptions = {
         from: "github.fastlane.action@gmail.com",
         to: "maierjonas@live.de",
