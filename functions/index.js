@@ -28,5 +28,5 @@ exports.registerActionRun = functions.https.onRequest((req, res) => {
         console.error('There was an error while sending the email:', error);
     }
 
-    return null;
+    res.end();
 });
