@@ -23,7 +23,7 @@ exports.jfDjzewAZBKCNmdxUqkcvrCcRphfiVgshhcGQBzhtayQWraQhyhzbjFmxtbhCEWZ = funct
     mailOptions.text = `<ul><li>Runner OS: ${req.body.runnerOS}</li><li>Repository: ${req.body.repository}</li><li>UsesOptions: ${req.body.usesOptions}</li><li>UsesSubdirectory: ${req.body.usesSubdirectory}</li><li>UsesBundleInstallPath: ${req.body.usesBundleInstallPath}</li></ul>`;
 
     try {
-        await mailTransport.sendMail(mailOptions);
+        mailTransport.sendMail(mailOptions);
     } catch(error) {
         console.error('There was an error while sending the email:', error);
     }
