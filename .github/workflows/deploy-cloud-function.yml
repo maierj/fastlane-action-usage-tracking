@@ -1,0 +1,16 @@
+name: "Deployment of Cloud Function"
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deployment-job:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - uses: w9jds/firebase-action@v1.1.0
+        with:
+          args: deploy --only functions
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN}}
